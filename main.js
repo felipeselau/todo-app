@@ -4,7 +4,14 @@ function(){
     if(document.querySelector('#newtask input').value.length == 0){
         alert("Please Enter a Task")
     }else{
-        document.querySelector('#tasks').innerHTML += "<div class='task'><span id='taskname'>"+document.querySelector('#newtask input').value+"</span><div class='buttons'><div class='done'><span class='material-symbols-outlined'>check_circle</span></div><div class='delete'><span class='material-symbols-outlined'>delete</span></div></div></div>"
+        document.querySelector('#tasks').innerHTML += 
+        `<div class='task'>
+        <span id='taskname'>${document.querySelector('#newtask input').value}</span>
+        <div class='buttons'>
+        <div class='done'><span class='material-symbols-outlined md-60'>check_circle</span></div>
+        <div class='delete'><span class='material-symbols-outlined'>delete</span></div>
+        </div></div>`
+        document.querySelector('#newtask input').value = ""
         
         var currentTasks = document.querySelectorAll('.delete')
         var doneTasks = document.querySelectorAll('.done')

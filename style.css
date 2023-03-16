@@ -15,61 +15,101 @@ body{
     background-color: #1e1e2e;
 }
 
+h1, h2{
+    color: #fefefe;
+}
+
+h1{
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+h2{
+
+}
+
 #newtask{
-    background-color: lightcoral;
-    height: 8vh;
-    width: 40vw;
+    height: 30vh;
+    width: 100%;
     
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
 input{
-    height: 80%;
-    width: 60%;
+    height: 40%;
+    width: 100%;
     font-size: 1em;
-    border: 0;
-    padding-left: 3px;
+    border: solid 1px;
+    border-radius: 18px;
+    text-align: center;
+
+    font-size: 1.5em;
+    color: #4c4f69;
 }
 
 #push{
-    height: 80%;
-    width: 30%;
+    height: 40%;
+    width: 100%;
+    border: solid 1px;
+    border-radius: 18px;
+    background-color:#bcc0cc;
+    cursor: pointer; 
+    transition: all 100ms;
+
+    font-size: 1.5em;
+    text-transform: capitalize;
+    color: #4c4f69;
+}
+
+#push:hover{
+    opacity: 0.77;
 }
 
 .task{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;    
 
-    background-color: lightblue;
-    height: 6vh;
+    background-color: #dce0e8;
+    height: 18vh;
+    width: 100%;
     margin-top: 8px;
+
+    border: 3px solid #d20f39;
+    border-radius: 15px;
 }
 
 #taskname{
     height: 100%;
-    width: 60%;
-    padding-left: 3px;
-
-    background-color: antiquewhite;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons{
     display: flex;
-    width: 30%;
-    height: 80%;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: right;
+    text-align: right;
+    margin-right: 1em;
+    height: 100%;
 }
 
 .done, .delete{
     cursor: pointer;
 }
-
+.material-icons.md-60 { font-size: 60px; }
 
 #done{
-    background-color: green;
     text-decoration: line-through;
+    border-color: #40a02b;
 }
 
