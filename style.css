@@ -10,6 +10,7 @@ body{
     width: 100vw;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #1e1e2e;
@@ -24,9 +25,6 @@ h1{
     font-weight: 700;
 }
 
-h2{
-
-}
 
 #newtask{
     height: 30vh;
@@ -106,10 +104,28 @@ input{
 .done, .delete{
     cursor: pointer;
 }
-.material-icons.md-60 { font-size: 60px; }
 
 #done{
-    text-decoration: line-through;
     border-color: #40a02b;
+    text-decoration: line-through;
 }
 
+@media(max-width: 426px ){
+    body{
+        justify-content: center;
+    }
+    .wrapper{
+        width: 80vw;
+    }
+    .task{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .buttons{
+        flex-direction: row;
+        height: 20%;
+        width: 60%;
+        margin-right: 0;
+    }
+}
